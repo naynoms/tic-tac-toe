@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+
+
 body {
   background-color: pink;
+
 }
 h1 {
   text-align: center;
+  /*font-family: 'Rock Salt', cursive;*/
+  font-size: 50px;
+  margin-top: 1em;
 }
 .gameBoard {
   /*background-image: url("/images/white-background.jpg"); FILE NOT FOUND*/
@@ -10,7 +17,7 @@ h1 {
   height: 300px;
   width: 300px;
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 1em;
 }
 
 .square {
@@ -25,35 +32,39 @@ h1 {
   background-color: red;
   margin-top: 40px;
   text-align: center;
-  height: 150px;
+  height: 200px;
+  /*font-family: 'Rock Salt', cursive;*/
+
 }
 #pOne {
   display: inline-block;
   margin: 0 auto;
   background-color: purple;
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 150px;
   margin-right: 10%;
-  background-image: url("https://cdn.pixabay.com/photo/2013/07/13/10/33/cross-157492__340.png");
-  background-size: 100%;
+  /*background-image: url("https://cdn.pixabay.com/photo/2013/07/13/10/33/cross-157492__340.png");*/
+  /*background-size: 100%;*/
 }
 #pTwo {
   display: inline-block;
   margin: 0 auto;
   background-color: orange;
+  height: 200px;
+  width: 150px;
+  margin-left: 10%; /*need better way to position on page*/
+  /*background-image: url("https://cdn.pixabay.com/photo/2015/11/28/11/25/zero-1067088__340.jpg");
+  background-size: 100%;*/
+  /*background-position: center;*/
+}
+img {
   height: 100px;
   width: 100px;
-  margin-left: 10%; /*need better way to position on page*/
-  background-image: url("https://cdn.pixabay.com/photo/2015/11/28/11/25/zero-1067088__340.jpg");
-  background-size: 100%;
-  background-position: center;
 }
-.player1Name {
-  margin-top: 80px;
+.playerName {
+  margin-top: 10px;
 }
-.player2Name {
-  margin-top: 80px;
-}
+
 .x { /* for the squares when clicked */
   height: 31%;
   width: 31%;
@@ -76,12 +87,22 @@ h1 {
 .reset {
   display: block;
   background-color: aquamarine;
-  margin-top: 40px;
+  margin-top: 20px;
   text-align: center;
 }
 .winner {
   font-size: 50px;
+  /*font-family: 'Rock Salt', cursive;*/
+
+}
+.draw{
+  font-size: 50px;
+  /*font-family: 'Rock Salt', cursive;*/
+
 }
 .hidden {
   display: none;
 }
+/*#p2Name {
+  margin-top: 100px;
+}*/
