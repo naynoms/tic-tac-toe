@@ -6,9 +6,54 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Tic-Tac-Toe</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery.js"></script>
   <script src="js/main.js"></script>
 </head>
 <body>
+  <div class="container">
+    <div class="gameBoard">
+      <!-- need background image here -->
+      <div class="square" id="sq1"></div>
+      <div class="square" id="sq2"></div>
+      <div class="square" id="sq3"></div>
+      <div class="square" id="sq4"></div>
+      <div class="square" id="sq5"></div>
+      <div class="square" id="sq6"></div>
+      <div class="square" id="sq7"></div>
+      <div class="square" id="sq8"></div>
+      <div class="square" id="sq9"></div>
+    </div>
+    <div class="players">
+      <div id="pOne">
+        <!-- will be image -->
+
+        <input id="p1Name" type="text" placeholder="Your Name">
+        <button id="p1Button">Enter</button>
+        <p id="p1Show">Player One</p>
+
+      </div>
+      <div id="pTwo">
+         <!-- will be image -->
+        <input id="p2Name" type="text" placeholder="Your Name">
+        <button id='p2Button'>Enter</button>
+        <p id="p2Show">Player Two</p>
+
+      </div>
+    </div>
+
+  <!-- <div class="x">
+
+  </div> -->
+
+  <div class="reset">
+  <button id="resetB"> New Game</button>
+
+  </div>
+
+
+
+
+  </div> <!-- container -->
 
 </body>
 </html>

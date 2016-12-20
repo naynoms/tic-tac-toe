@@ -1,35 +1,14 @@
 var turns = 0;
 
-
-
 $(document).ready(function () {
 
-var p1 = $('#p1Name').val();
-var p2 = $('#p2Name').val();
-
-var players = function() {
-
-   p1 = $('#p1Name').val();
-   p2 = $('#p2Name').val();
-
-  $('#p1Show').text(p1);
-  $('#p2Show').text(p2);
-
-}
-$('#p1Button').on('click', players);
-$('#p2Button').on('click', players);
-
-
-var reset = function () {
-  var board = $('.square');
-  board.removeClass('x');
-  board.removeClass('o');
-}
-$('#resetB').on('click', reset);
 
 
 
-var win = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]; // reference for combos
+var p1 = $('#p1')
+var p2 = $('#p2')
+
+var win = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]];
 
 var newGameP1 = [];
 var newGameP2 = [];
@@ -52,9 +31,8 @@ var ttt = function () {
     $(this).addClass('x');
     turns ++;
     newGameP1.push(this);
+    console.log(turns);
     console.log(newGameP1);
-    //debugger;
-
     if (
 
       one.hasClass('x') && two.hasClass('x') && three.hasClass('x') || four.hasClass('x') && five.hasClass('x') && six.hasClass('x') ||
@@ -63,13 +41,14 @@ var ttt = function () {
       one.hasClass('x') && five.hasClass('x') && nine.hasClass('x') || three.hasClass('x') && five.hasClass('x') && seven.hasClass('x')
 
     ) {
-      console.log(p1 + ' wins');
+      console.log('p1 wins');
     }
 
   } else {
     $(this).addClass('o');
     turns ++;
     newGameP2.push(this)
+    console.log(turns);
     console.log(newGameP2);
     if (
 
@@ -79,7 +58,7 @@ var ttt = function () {
       one.hasClass('o') && five.hasClass('o') && nine.hasClass('o') || three.hasClass('o') && five.hasClass('o') && seven.hasClass('o')
 
     ) {
-      console.log(p2 + ' wins');
+      console.log('p2 wins');
     }
   }
 
@@ -87,8 +66,77 @@ var ttt = function () {
 $('.square').on('click', ttt);
 
 
+// var ttt = function () {
+//   if(turns % 2 === 0) {
+//     $(this).text('x');
+//     turns ++;
+//     console.log(turns);
+//   } else {
+//     $(this).text('o');
+//     turns ++;
+//     console.log(turns);
+//   }
+//
+// } /* ttt func */
 
 
+
+
+
+//////////////////////////////////////////////////
+
+
+//$('.square').on('click', ttt);
+
+var $board = $('.square');
+
+var win = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]];
+
+// var newGameP1 = [];
+// var newGameP2 = [];
+
+var checkForWin = function () {
+  // var board = $('.square');
+  // var newGameP1 = [];
+  // var newGameP2 = [];
+  for(var i = 0; i <= $board.length; i++) {
+    if($board.hasClass('x')) {
+      newGameP1.push([i]);
+      console.log(newGameP1);
+    } else if($board.hasClass('o')) {
+      newGameP2.push([i]);
+      console.log(newGameP2);
+    }
+  } //for loop
+};
+checkForWin();
+
+////////////////////////////////////////////////////
+
+/*
+var win = {
+
+board: $('.square'),
+winCombos: [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]],
+x: [],
+o: [],
+winner: function() {
+          for (var i = 0; i < board.length; i++) {
+          }
+          if(this[i].hasClass('x')) {
+            x.push[i];
+            console.log(x);
+          }
+        }
+
+
+}
+
+
+
+
+
+*/
 
 
 
