@@ -27,6 +27,10 @@ var reset = function () {
 }
 $('#resetB').on('click', reset);
 
+// var endGame = function () {
+//   if()
+// }
+
 
 
 var win = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]; // reference for combos
@@ -63,7 +67,8 @@ var ttt = function () {
       one.hasClass('x') && five.hasClass('x') && nine.hasClass('x') || three.hasClass('x') && five.hasClass('x') && seven.hasClass('x')
 
     ) {
-      console.log(p1 + ' wins');
+      var winner = p1;
+      $('div.winner').removeClass('hidden');
     }
 
   } else {
@@ -79,7 +84,8 @@ var ttt = function () {
       one.hasClass('o') && five.hasClass('o') && nine.hasClass('o') || three.hasClass('o') && five.hasClass('o') && seven.hasClass('o')
 
     ) {
-      console.log(p2 + ' wins');
+      var winner = p2;
+      $('div.winner').removeClass('hidden');
     }
   }
 
