@@ -24,6 +24,9 @@ var reset = function () {
   var board = $('.square');
   board.removeClass('x');
   board.removeClass('o');
+  $('div.winner').addClass('hidden');
+
+
 }
 $('#resetB').on('click', reset);
 

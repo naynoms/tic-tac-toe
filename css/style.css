@@ -20,11 +20,12 @@ h1 {
   background-color: yellow;
   border: 1px solid black;
 }
-.players {
+.players { /* includes pic of x and o and input and button*/
   display: block;
   background-color: red;
   margin-top: 40px;
   text-align: center;
+  height: 150px;
 }
 #pOne {
   display: inline-block;
@@ -32,7 +33,7 @@ h1 {
   background-color: purple;
   height: 100px;
   width: 100px;
-  /*margin-left: 30%; /*need better way to position on page*/
+  margin-right: 10%;
   background-image: url("https://cdn.pixabay.com/photo/2013/07/13/10/33/cross-157492__340.png");
   background-size: 100%;
 }
@@ -42,19 +43,25 @@ h1 {
   background-color: orange;
   height: 100px;
   width: 100px;
-  margin-left: 20%; /*need better way to position on page*/
+  margin-left: 10%; /*need better way to position on page*/
   background-image: url("https://cdn.pixabay.com/photo/2015/11/28/11/25/zero-1067088__340.jpg");
   background-size: 100%;
   background-position: center;
 }
-.x {
+.player1Name {
+  margin-top: 80px;
+}
+.player2Name {
+  margin-top: 80px;
+}
+.x { /* for the squares when clicked */
   height: 31%;
   width: 31%;
   background-color: green;
   background-image: url("https://cdn.pixabay.com/photo/2013/07/13/10/33/cross-157492__340.png");
   background-size: 100%;
 }
-.o {
+.o { /* for the squares when clicked */
   height: 31%;
   width: 31%;
   background-color: white;
