@@ -2,18 +2,23 @@
 
 
 body {
-  background-color: pink;
+  background-color: none;
 
 }
 h1 {
   text-align: center;
-  /*font-family: 'Rock Salt', cursive;*/
-  font-size: 50px;
+  height: 120px;
+  background-image: url('../images/tictactitle.png');
+  background-size: 30%;
+  background-position: center;;
   margin-top: 1em;
+  background-color: none;
 }
 .gameBoard {
-  /*background-image: url("/images/white-background.jpg"); FILE NOT FOUND*/
-  background-color: blue;
+  background-image: url('../images/tictacboard.png');
+  background-size: 135%;
+  background-position: center;
+  background-color: none;
   height: 300px;
   width: 300px;
   margin: 0 auto;
@@ -24,12 +29,12 @@ h1 {
   display: inline-block;
   width: 31.5%;
   height: 31.5%;
-  background-color: yellow;
-  border: 1px solid black;
+  background-color: none;
+  /*border: 1px solid black;*/
 }
 .players { /* includes pic of x and o and input and button*/
   display: block;
-  background-color: red;
+  background-color: none;
   margin-top: 40px;
   text-align: center;
   height: 200px;
@@ -39,28 +44,42 @@ h1 {
 #pOne {
   display: inline-block;
   margin: 0 auto;
-  background-color: purple;
+  background-color: none;
   height: 200px;
   width: 150px;
   margin-right: 10%;
+
+
   /*background-image: url("https://cdn.pixabay.com/photo/2013/07/13/10/33/cross-157492__340.png");*/
   /*background-size: 100%;*/
 }
 #pTwo {
   display: inline-block;
   margin: 0 auto;
-  background-color: orange;
+  background-color: none;
   height: 200px;
   width: 150px;
   margin-left: 10%; /*need better way to position on page*/
+  text-align: center;
   /*background-image: url("https://cdn.pixabay.com/photo/2015/11/28/11/25/zero-1067088__340.jpg");
   background-size: 100%;*/
   /*background-position: center;*/
 }
-img {
+.img {
   height: 100px;
   width: 100px;
+  background-size: 100%;
+  /*text-align: center;*/
 }
+#x {
+  background-image: url('../images/tictacx.png');
+  /*text-align: center;*/
+}
+#o {
+  background-image: url('../images/tictaco.png');
+
+}
+
 .playerName {
   margin-top: 10px;
 }
@@ -68,15 +87,15 @@ img {
 .x { /* for the squares when clicked */
   height: 31%;
   width: 31%;
-  background-color: green;
-  background-image: url("https://cdn.pixabay.com/photo/2013/07/13/10/33/cross-157492__340.png");
+  background-color: none;
+  background-image: url('../images/tictacx.png');
   background-size: 100%;
 }
 .o { /* for the squares when clicked */
   height: 31%;
   width: 31%;
-  background-color: white;
-  background-image: url("https://cdn.pixabay.com/photo/2015/11/28/11/25/zero-1067088__340.jpg");
+  background-color: none;
+  background-image: url('../images/tictaco.png');
   background-size: 100%;
   background-position: center;
 }
@@ -92,17 +111,32 @@ img {
 }
 .winner {
   font-size: 50px;
-  /*font-family: 'Rock Salt', cursive;*/
-
+  position: fixed;
+  margin: 0 auto;
+  top: 5em;
+  left: 43%;
 }
 .draw{
   font-size: 50px;
-  /*font-family: 'Rock Salt', cursive;*/
-
+  position: fixed;
+  margin: 0 auto;
+  top: 5em;
+  left: 43%;
 }
 .hidden {
   display: none;
 }
 /*#p2Name {
   margin-top: 100px;
+}*/
+/*.score {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  display: inline-block;
+}
+#p1 {
+  height: 200px;
+  width: 100px;
+  display: inline-block;
 }*/
