@@ -1,20 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Rock+Salt');
 
-
 body {
   background-color: none;
-
 }
-.h1 {
+.h1 { /* images as heading */
   text-align: center;
   max-height: 120px;
-  /*background-image: url('../images/tictactitle.png');
-  background-size: 30%;
-  background-position: center;*/
   margin: 0 auto;
   background-color: none;
   display: block;
-
 }
 .gameBoard {
   background-image: url('../images/tictacboard.png');
@@ -26,22 +20,19 @@ body {
   margin: 0 auto;
   margin-top: 1em;
 }
-
 .square {
   display: inline-block;
   width: 31.5%;
   height: 31.5%;
   background-color: none;
-  /*border: 1px solid black;*/
 }
-.players { /* includes pic of x and o and input and button*/
+.players { /* includes pic of x and o */
   display: block;
   background-color: none;
   margin-top: 40px;
   text-align: center;
   height: 200px;
   font-family: 'Rock Salt', cursive;
-
 }
 #pOne {
   display: inline-block;
@@ -49,8 +40,7 @@ body {
   background-color: none;
   height: 200px;
   width: 150px;
-  margin-right: 10%;
-
+  /*margin-right: 10%;*/
 }
 #pTwo {
   display: inline-block;
@@ -58,9 +48,8 @@ body {
   background-color: none;
   height: 200px;
   width: 150px;
-  margin-left: 10%; /*need better way to position on page*/
+  /*margin-left: 10%; /*need better way to position on page*/
   text-align: center;
-
 }
 .img {
   height: 100px;
@@ -76,12 +65,9 @@ body {
   background-image: url('../images/tictaco.png');
   margin: 0 auto;
 }
-
 .playerName {
   margin-top: 10px;
-
 }
-
 .x { /* for the squares when clicked */
   height: 31%;
   width: 31%;
@@ -97,10 +83,6 @@ body {
   background-size: 100%;
   background-position: center;
 }
-.win {
-
-}
-
 .reset {
   display: block;
   background-color: none;
@@ -112,7 +94,6 @@ body {
   position: fixed;
   height: 300px;
   min-width: 300px;
-  /*background-color: blue;*/
   margin: 0 auto;
   top: 20%;
   left: 39%;
@@ -122,14 +103,11 @@ body {
   line-height: 300px;
   color: red;
 }
-
-
 .draw{
   font-size: 70px;
   position: fixed;
   height: 300px;
   min-width: 300px;
-  /*background-color: blue;*/
   margin: 0 auto;
   top: 20%;
   left: 39%;
@@ -139,47 +117,29 @@ body {
   line-height: 300px;
   color: red;
 }
-
 .hidden {
   display: none;
-}
-
-#p1Button  { /* DISPLAY NONE */
-  font-family: 'Rock Salt', cursive;
-  background-color: white;
-  border: none;
-  display: none;
-}
-#p2Button {
-  font-family: 'Rock Salt', cursive;
-  background-color: white;
-  border: none;
-  display: none;
-}
-
-input { /* DISPLAY NONE */
-  font-family: 'Rock Salt', cursive;
-  text-align: center;
-  border: none;
-  display: none;
-
 }
 #resetB {
   font-family: 'Rock Salt', cursive;
   background-color: white;
   border: none;
 }
-/*#p2Name {
-  margin-top: 100px;
-}*/
-/*.score {
-  height: 200px;
-  width: 200px;
-  border: 1px solid black;
-  display: inline-block;
+#p1Button  { /* DISPLAY NONE */
+  font-family: 'Rock Salt', cursive;
+  background-color: white;
+  border: none;
+  display: none;
 }
-#p1 {
-  height: 200px;
-  width: 100px;
-  display: inline-block;
-}*/
+#p2Button { /* DISPLAY NONE */
+  font-family: 'Rock Salt', cursive;
+  background-color: white;
+  border: none;
+  display: none;
+}
+input { /* DISPLAY NONE */
+  font-family: 'Rock Salt', cursive;
+  text-align: center;
+  border: none;
+  display: none;
+}

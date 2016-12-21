@@ -7,27 +7,26 @@ $(document).ready(function () {
   var p1 = $('#p1Name').val();
   var p2 = $('#p2Name').val();
 
-  var players = function() {
 
-    p1 = $('#p1Name').val();
-    p2 = $('#p2Name').val();
+  //////////////// CURRENTLY UNUSED AS NAME INPUT AND BUTTONS HIDDEN !!!!!!!
+  // var players = function() {
+  //
+  //   p1 = $('#p1Name').val();
+  //   p2 = $('#p2Name').val();
+  //
+  //   $('#p1Name, #p2Name').val('');
+  //
+  //   if (p1) {
+  //     $('#p1Show').html(p1);
+  //   }
+  //   if (p2) {
+  //     $('#p2Show').html(p2);
+  //   }
+  // };
+  // $('#p1Button').on('click', players);
+  // $('#p2Button').on('click', players);
 
-    $('#p1Name, #p2Name').val('');
-
-    if (p1) {
-      $('#p1Show').html(p1);
-    }
-    if (p2) {
-      $('#p2Show').html(p2);
-    }
-
-
-  };
-  $('#p1Button').on('click', players);
-  $('#p2Button').on('click', players);
-
-
-  var reset = function () {
+  var reset = function () { // resets the board for a new game
     var board = $('.square');
     board.removeClass('x');
     board.removeClass('o');
@@ -64,7 +63,7 @@ $(document).ready(function () {
   var nine = $('#sq9');
 
   var winner = function () {
-    if (
+    if ( // x winning combos
 
       (one.hasClass('x') && two.hasClass('x') && three.hasClass('x')) || (four.hasClass('x') && five.hasClass('x') && six.hasClass('x')) ||
       (seven.hasClass('x') && eight.hasClass('x') && nine.hasClass('x')) || (one.hasClass('x') && four.hasClass('x') && seven.hasClass('x')) ||
@@ -78,7 +77,7 @@ $(document).ready(function () {
       scoreCounter();
       return;
 
-    } else if (
+    } else if ( // o winning combos
 
       (one.hasClass('o') && two.hasClass('o') && three.hasClass('o')) || (four.hasClass('o') && five.hasClass('o') && six.hasClass('o')) ||
       (seven.hasClass('o') && eight.hasClass('o') && nine.hasClass('o')) || (one.hasClass('o') && four.hasClass('o') && seven.hasClass('o')) ||
@@ -100,25 +99,22 @@ $(document).ready(function () {
 
   var drawMessage = $('div.draw');
   var draw = function () {
-    if(!winner() && turns === 9) {  //should be && if no winner found
+    if(!winner() && turns === 9) {
       drawMessage.text("draw");
       drawMessage.removeClass('hidden');
     }
   };
 
 
-  var ttt = function () {
+  var ttt = function () { //game play function
     if(turns % 2 === 0) {
       $(this).addClass('x');
       turns ++;
       draw();
-      // winner();
-
     } else {
       $(this).addClass('o');
       turns ++;
       draw();
-      // winner();
       }
   }; /* ttt func */
   $('.square').on('click', ttt);
