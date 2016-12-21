@@ -144,19 +144,30 @@ body {
   display: none;
 }
 
-button { /* DISPLAY NONE */
+#p1Button  { /* DISPLAY NONE */
   font-family: 'Rock Salt', cursive;
   background-color: white;
   border: none;
   display: none;
 }
+#p2Button {
+  font-family: 'Rock Salt', cursive;
+  background-color: white;
+  border: none;
+  display: none;
+}
+
 input { /* DISPLAY NONE */
   font-family: 'Rock Salt', cursive;
   text-align: center;
   border: none;
   display: none;
-  
 
+}
+#resetB {
+  font-family: 'Rock Salt', cursive;
+  background-color: white;
+  border: none;
 }
 /*#p2Name {
   margin-top: 100px;
