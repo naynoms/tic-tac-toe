@@ -9,6 +9,7 @@ body {
   margin: 0 auto;
   background-color: none;
   display: block;
+  max-width: 100vw;
 }
 .gameBoard {
   background-image: url('../images/tictacboard.png');
