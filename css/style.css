@@ -4,7 +4,7 @@ body {
   background-color: none;
 }
 .h1 { /* images as heading */
-  text-align: center;
+  /*text-align: center;*/
   max-height: 120px;
   margin: 0 auto;
   background-color: none;
@@ -91,12 +91,11 @@ body {
 }
 .winner {
   font-size: 70px;
-  position: fixed;
+  position: absolute;
   height: 300px;
-  min-width: 300px;
+  width: 100%;
   margin: 0 auto;
-  top: 20%;
-  left: 39%;
+  top: 18%;
   font-family: 'Rock Salt', cursive;
   text-align: center;
   vertical-align: middle;
@@ -105,12 +104,11 @@ body {
 }
 .draw{
   font-size: 70px;
-  position: fixed;
+  position: absolute;
   height: 300px;
-  min-width: 300px;
+  width: 100%;
   margin: 0 auto;
   top: 20%;
-  left: 39%;
   font-family: 'Rock Salt', cursive;
   text-align: center;
   vertical-align: middle;
