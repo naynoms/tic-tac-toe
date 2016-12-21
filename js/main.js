@@ -21,6 +21,7 @@ $(document).ready(function () {
       $('#p2Show').html(p2);
     }
 
+
   };
   $('#p1Button').on('click', players);
   $('#p2Button').on('click', players);
@@ -40,8 +41,13 @@ $(document).ready(function () {
   var winnerMessage = $('div.winner');
 
   var showWinner = function (who) {
-    winnerMessage.text(who + " wins!");
+    winnerMessage.text("winner!");
     winnerMessage.removeClass('hidden');
+  };
+
+  var scoreCounter = function () {
+    $('#p1Counter').text(p1WinCount);
+    $('#p2Counter').text(p2WinCount);
   };
 
 
@@ -60,15 +66,17 @@ $(document).ready(function () {
   var winner = function () {
     if (
 
-      (one.hasClass('x') && two.hasClass('x') && three.hasClass('x')) || (four.hasClass('x') && five.hasClass('x') && six.hasClass('x'))||
+      (one.hasClass('x') && two.hasClass('x') && three.hasClass('x')) || (four.hasClass('x') && five.hasClass('x') && six.hasClass('x')) ||
       (seven.hasClass('x') && eight.hasClass('x') && nine.hasClass('x')) || (one.hasClass('x') && four.hasClass('x') && seven.hasClass('x')) ||
-      (two.hasClass('x') && five.hasClass('x') && eight.hasClass('x'))|| (three.hasClass('x') && six.hasClass('x') && nine.hasClass('x')) ||
+      (two.hasClass('x') && five.hasClass('x') && eight.hasClass('x')) || (three.hasClass('x') && six.hasClass('x') && nine.hasClass('x')) ||
       (one.hasClass('x') && five.hasClass('x') && nine.hasClass('x')) || (three.hasClass('x') && five.hasClass('x') && seven.hasClass('x'))
 
     ) {
       var who = p1; //
       showWinner(who);
       p1WinCount ++;
+      scoreCounter();
+      return;
 
     } else if (
 
@@ -81,6 +89,8 @@ $(document).ready(function () {
       var who = p2;
       showWinner(who);
       p2WinCount ++;
+      scoreCounter();
+      return;
 
     } else {
       // var who = 'draw';
@@ -91,7 +101,7 @@ $(document).ready(function () {
   var drawMessage = $('div.draw');
   var draw = function () {
     if(!winner() && turns === 9) {  //should be && if no winner found
-      drawMessage.text('It is a Draw');
+      drawMessage.text("draw");
       drawMessage.removeClass('hidden');
     }
   };
@@ -102,13 +112,13 @@ $(document).ready(function () {
       $(this).addClass('x');
       turns ++;
       draw();
-      winner();
+      // winner();
 
     } else {
       $(this).addClass('o');
       turns ++;
       draw();
-      winner();
+      // winner();
       }
   }; /* ttt func */
   $('.square').on('click', ttt);
