@@ -32,7 +32,7 @@ $(document).ready(function () {
     board.removeClass('x');
     board.removeClass('o');
     $('div.winner').addClass('hidden');
-    // $('div.draw').addClass('hidden');
+    $('div.draw').addClass('hidden');
     turns = 0;
   };
   $('#resetB').on('click', reset);
