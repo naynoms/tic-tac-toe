@@ -4,7 +4,6 @@ body {
   background-color: none;
 }
 .h1 { /* images as heading */
-  /*text-align: center;*/
   max-height: 120px;
   margin: 0 auto;
   background-color: none;
@@ -34,6 +33,7 @@ body {
   text-align: center;
   height: 200px;
   font-family: 'Rock Salt', cursive;
+  /*margin-bottom: 20px;*/
 }
 #pOne {
   display: inline-block;
@@ -41,7 +41,6 @@ body {
   background-color: none;
   height: 200px;
   width: 150px;
-  /*margin-right: 10%;*/
 }
 #pTwo {
   display: inline-block;
@@ -49,14 +48,12 @@ body {
   background-color: none;
   height: 200px;
   width: 150px;
-  /*margin-left: 10%; /*need better way to position on page*/
   text-align: center;
 }
 .img {
   height: 100px;
   width: 100px;
   background-size: 100%;
-  /*text-align: center;*/
 }
 #x {
   background-image: url('../images/tictacx.png');
@@ -109,7 +106,7 @@ body {
   height: 300px;
   width: 100%;
   margin: 0 auto;
-  top: 20%;
+  top: 18%;
   font-family: 'Rock Salt', cursive;
   text-align: center;
   vertical-align: middle;
@@ -123,22 +120,4 @@ body {
   font-family: 'Rock Salt', cursive;
   background-color: white;
   border: none;
-}
-#p1Button  { /* DISPLAY NONE */
-  font-family: 'Rock Salt', cursive;
-  background-color: white;
-  border: none;
-  display: none;
-}
-#p2Button { /* DISPLAY NONE */
-  font-family: 'Rock Salt', cursive;
-  background-color: white;
-  border: none;
-  display: none;
-}
-input { /* DISPLAY NONE */
-  font-family: 'Rock Salt', cursive;
-  text-align: center;
-  border: none;
-  display: none;
 }

@@ -4,16 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tic-Tac-Toe</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/jquery.js"></script>
   <script src="js/main.js"></script>
 </head>
 <body>
-  <!-- <h1> -->
-  <img src="images/tictactitle.png" alt="" class="h1">
-  <!-- </h1> -->
+
+  <img src="images/tictactitle.png" alt="" class="h1"> <!-- <h1> -->
+
   <div class="container">
     <div class="gameBoard">
       <div class="square" id="sq1"></div>
@@ -26,37 +25,29 @@
       <div class="square" id="sq8"></div>
       <div class="square" id="sq9"></div>
     </div>
-    <div class="winner hidden">
-    </div>
-    <div class="draw hidden">
-    </div>
+
+    <div class="winner hidden"></div>
+    <div class="draw hidden"></div>
+
     <div class="players">
+
       <div id="pOne"><!--image -->
         <div class="img" id="x"></div>
-        <input id="p1Name" type="text" placeholder="your name">
-        <button id="p1Button">enter</button>
-        <p class="playerName" id="p1Show">player one</p>
+        <p class="playerName">player one</p>
         <div id="p1Counter">0</div>
       </div>
 
       <div id="pTwo"> <!--image -->
         <div class="img" id="o"></div>
-        <input id="p2Name" type="text" placeholder="Your Name">
-        <button id='p2Button'>enter</button>
-        <p class="playerName" id="p2Show">player two</p>
+        <p class="playerName">player two</p>
         <div id="p2Counter">0</div>
       </div>
-    </div>
 
-    <!-- <div class="winner hidden">
-    </div>
-    <div class="draw hidden">
-    </div> -->
+    </div> <!-- players -->
 
     <div class="reset">
-    <button id="resetB"> new game</button>
+      <button id="resetB">new game</button>
     </div>
-
 
   </div> <!-- container -->
 

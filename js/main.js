@@ -4,27 +4,8 @@ var p2WinCount = 0;
 
 $(document).ready(function () {
 
-  var p1 = $('#p1Name').val();
-  var p2 = $('#p2Name').val();
-
-
-  //////////////// CURRENTLY UNUSED AS NAME INPUT AND BUTTONS HIDDEN !!!!!!!
-  // var players = function() {
-  //
-  //   p1 = $('#p1Name').val();
-  //   p2 = $('#p2Name').val();
-  //
-  //   $('#p1Name, #p2Name').val('');
-  //
-  //   if (p1) {
-  //     $('#p1Show').html(p1);
-  //   }
-  //   if (p2) {
-  //     $('#p2Show').html(p2);
-  //   }
-  // };
-  // $('#p1Button').on('click', players);
-  // $('#p2Button').on('click', players);
+  var p1 = $('#pOne');
+  var p2 = $('#pTwo');
 
   var reset = function () { // resets the board for a new game
     var board = $('.square');
@@ -39,7 +20,7 @@ $(document).ready(function () {
 
   var winnerMessage = $('div.winner');
 
-  var showWinner = function (who) {
+  var showWinner = function (who) { // winner message over gameboard
     winnerMessage.text("winner!");
     winnerMessage.removeClass('hidden');
   };
@@ -71,7 +52,7 @@ $(document).ready(function () {
       (one.hasClass('x') && five.hasClass('x') && nine.hasClass('x')) || (three.hasClass('x') && five.hasClass('x') && seven.hasClass('x'))
 
     ) {
-      var who = p1; //
+      var who = p1;
       showWinner(who);
       p1WinCount ++;
       scoreCounter();
@@ -92,12 +73,11 @@ $(document).ready(function () {
       return;
 
     } else {
-      // var who = 'draw';
       return false;
     }
   };
 
-  var drawMessage = $('div.draw');
+  var drawMessage = $('div.draw'); // draw message over the gameboard
   var draw = function () {
     if(!winner() && turns === 9) {
       drawMessage.text("draw");
@@ -116,7 +96,7 @@ $(document).ready(function () {
       turns ++;
       draw();
       }
-  }; /* ttt func */
+  };
   $('.square').on('click', ttt);
 
 }); //document ready
