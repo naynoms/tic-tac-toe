@@ -16,6 +16,11 @@ Setting up class and ID names to be intuitive and readable was not something I d
 I'm not sure how well I stuck to the KISS principle.
 
 
+###Bugs
+
+You are able to click on a square after it has already been taken by another player. This means cheating is possible. It usually backfires on the cheater as it recognises the first click. It also means you can click 9 times in one square and 'draw' will appear on the screen.
+
+
 ###Triumphs
 
 I am most happy with the fact that I was able to deliver something that matches the aesthetic vision I had when fist planning this game.
