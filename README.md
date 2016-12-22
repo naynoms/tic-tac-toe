@@ -1,4 +1,4 @@
-#Title: TIC TAC TOE
+#TIC TAC TOE
 
 
 This is a very basic game of Tic Tac Toe a.k.a. Naughts and Crosses. Done as Project 0 for General Assembly.
@@ -18,7 +18,7 @@ I'm not sure how well I stuck to the KISS principle.
 
 ###Triumphs
 
-I am most happy with the fact that I was able to deliver something that matches the aesthetic vision I had when fist planning this game. 
+I am most happy with the fact that I was able to deliver something that matches the aesthetic vision I had when fist planning this game.
 
 ###Link
 
